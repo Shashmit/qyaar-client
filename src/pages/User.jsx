@@ -14,16 +14,10 @@ const User = () => {
 
   async function retrive(e) {
     e.preventDefault();
-    await axios.post(
-      import.meta.env.VITE_BASE_URL + "api/users/saveAadhaar",
-      {
-        digilockerCode,
-        transactionId,
-      },
-      {
-        headers: { "Content-Type": "application/json" },
-      }
-    );
+    await axios.post(import.meta.env.VITE_BASE_URL + "api/users/saveAadhaar", {
+      digilockerCode,
+      transactionId,
+    });
   }
 
   if (sessionStorage.getItem("userId")) {

@@ -12,12 +12,7 @@ const Register = () => {
     e.preventDefault();
     const res = await axios.post(
       import.meta.env.VITE_BASE_URL + "api/users/register",
-      JSON.stringify({ name, email, password }),
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
+      JSON.stringify({ name, email, password })
     );
     if (res.status !== 200) {
       alert("Registration Failed");

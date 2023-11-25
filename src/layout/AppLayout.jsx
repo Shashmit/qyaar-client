@@ -26,10 +26,6 @@ const AppLayout = () => {
         axios({
           method: "GET",
           url: import.meta.env.VITE_BASE_URL + "api/users/logout",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          withCredentials: true,
         }).then(() => {
           navigate("/login");
         });

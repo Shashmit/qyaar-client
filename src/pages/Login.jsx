@@ -14,9 +14,6 @@ const Login = () => {
     axios({
       method: "POST",
       url: import.meta.env.VITE_BASE_URL + "api/users/login",
-      headers: {
-        "Content-Type": "application/json",
-      },
       data: {
         email,
         password,

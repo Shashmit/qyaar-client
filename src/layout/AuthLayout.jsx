@@ -12,10 +12,6 @@ const AuthLayout = () => {
       const res = await axios({
         method: "GET",
         url: import.meta.env.VITE_BASE_URL + "api/users/checkAuth",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        withCredentials: true,
       });
       if (res.data.isLoggedIn) {
         navigate("/");

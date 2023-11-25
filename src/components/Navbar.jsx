@@ -9,10 +9,6 @@ const Navbar = () => {
     await axios({
       method: "POST",
       url: import.meta.env.VITE_BASE_URL + "api/users/logout",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      withCredentials: true,
     }).then((res) => {
       if (res.status === 200) {
         sessionStorage.removeItem("userId");
